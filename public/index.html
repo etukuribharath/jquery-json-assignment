@@ -1,0 +1,244 @@
+<html>
+
+  <head><!--head section starting-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link href="style.css" rel="stylesheet"><!--custom style sheet-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head><!--head section ending-->
+
+  <body>
+        <div class="container"><!--container starting -->
+      <nav class="navbar navbar-inverse navbar-fixed-top"><!--navbar starting -->
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#"></a>
+              <a href="#" class="navbar-brand">Phone Book</a>
+        </div>
+        
+        <div>
+               <ul class="nav navbar-nav navbar-right">
+                 <li>
+                    <a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span>Create New User
+                    </a>
+                  </li>
+                 <li>
+                    <a href="#myModal1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span>   Login</a>
+                  </li>
+                 <li>
+                    <a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span>
+                    Sign Up
+                    </a>
+                  </li>
+               </ul>
+          </div>
+       </nav><!--navbar closing -->
+  
+<!-- sign up modal starting -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <form class="form-horizontal" action="" method="POST">
+          <fieldset>
+            <div id="legend">
+              <legend class="">Add New Member</legend>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="username">Name</label>
+              <div class="controls">
+                <input type="text" id="username" class="form-control input-lg">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password" >Gender</label>
+              <div class="controls">
+                <input type="text" id="gender" class="form-control input-lg">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password_confirm" >Age</label>
+              <div class="controls">
+                <input type="text" id="age" class="form-control input-lg">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="email">E-mail</label>
+              <div class="controls">
+                <input type="email" id="email" name="email" class="form-control input-lg">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Phone Number</label>
+              <div class="controls">
+                <input type="text" id="phone" class="form-control input-lg">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="location">Location</label>
+              <div class="controls">
+                <input type="text" id="location" class="form-control input-lg">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <!-- Button -->
+              <div class="controls">
+                <button class="btn btn-success" id="add" style="margin-top:15px">Add</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+    
+        </div>
+      </div>
+      
+    </div>
+  </div><!--end of modal-->
+
+<!-- update modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <form class="form-horizontal" action="" method="POST">
+          <fieldset>
+            <div id="legend">
+              <legend class="">Add New Member</legend>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="password" >ID</label>
+              <div class="controls">
+                <input type="text" id="updateid" class="form-control input-lg" disabled="true">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="username">Name</label>
+              <div class="controls">
+                <input type="text" id="username1" class="form-control input-lg">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password" >Gender</label>
+              <div class="controls">
+                <input type="text" id="gender1" class="form-control input-lg">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password_confirm" >Age</label>
+              <div class="controls">
+                <input type="text" id="age1" class="form-control input-lg">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="email">E-mail</label>
+              <div class="controls">
+                <input type="email" id="email1" name="email" class="form-control input-lg">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Phone Number</label>
+              <div class="controls">
+                <input type="text" id="phone1" class="form-control input-lg">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="location">Location</label>
+              <div class="controls">
+                <input type="text" id="location1" class="form-control input-lg">
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <!-- Button -->
+              <div class="controls">
+                <button class="btn btn-success" id="updated" style="margin-top:15px">Update</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+    
+        </div>
+      </div>
+      
+    </div>
+  </div><!--end of modal-->
+
+      <div class="row"><!--form div starting-->
+        <div class="col-lg-12 col-sm-12 col-md-12" style="text-align: center">
+          <form name="form" action="#"><!--search form starting-->
+            <h1 class="h">Welcome To User Search</h1>
+            <!--text field for the movie search-->
+            <input type="text" class="form-control" name="movie" placeholder="Enter Movie Name" id="input" class="">
+            
+            <input type="submit" name="Search" value="Search" class="btn1 btn btn-success" style="margin-top:15px"><!--form submit button-->
+          </form><!--search form ending -->
+        </div>
+      </div><!--form div closing -->
+    </div><!--container closing -->
+
+    <div class="container well"><!--container for movie details starting-->
+      <div class="row details"><!--row ending-->
+        <!--Movie name header-->
+        <div class="details1 col-lg-2 col-sm-2 col-md-2 col-xs-2">
+          <h4>Person Name</h4>
+        </div>
+        <!--Year header-->
+        <div class="details1 col-lg-1 col-sm-1 col-md-1 col-xs-1">
+          <h4>Gender</h4>
+        </div>
+        <!--imdb header-->
+        <div class="details1 col-lg-1 col-sm-1 col-md-1 col-xs-1">
+          <h4>age</h4>
+        </div>
+        <!--Type header-->
+        <div class="details1 col-lg-3 col-sm-3 col-md-3 col-xs-3">
+          <h4>E-mail</h4>
+        </div>
+        <!--Image header-->
+        <div class="details1 col-lg-2 col-sm-2 col-md-2 col-xs-2">
+        <h4>Phone</h4>
+        </div>
+
+        <div class="details1 col-lg-1 col-sm-1 col-md-1 col-xs-1">
+        <h4>Location</h4>
+        </div>
+
+        <div class="details1 col-lg-1 col-sm-1 col-md-1 col-xs-1">
+        <h4>Update</h4>
+        </div>
+
+        <div class="details1 col-lg-1 col-sm-1 col-md-1 col-xs-1">
+        <h4>Delete</h4>
+        </div>
+
+      </div><!--row ending-->
+    </div><!--container for movie details ending-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery-3.1.0.js"></script><!--jquery library-->
+    <script type="text/javascript" src="crudops.js"></script><!--custom jquery-->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  </body>
+
+</html>
